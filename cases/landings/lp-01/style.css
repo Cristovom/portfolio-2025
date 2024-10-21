@@ -1,0 +1,164 @@
+* {
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+img {
+    width: 100%;
+}
+
+/* fonts */
+.font-default h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+.font-default h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.1em;
+}
+
+.font-default p,
+.font-default a {
+    font-size: 14px;
+    line-height: 1.3em;
+}
+
+/* default */
+.bc-bege {
+    background: #E6DAC0;
+}
+
+.btn-default {
+    padding: 10px 22px;
+    border-radius: 50px;
+    color: #000;
+    display: inline-block;
+}
+
+.btn-outline {
+    border: 1px solid #000;
+}
+
+.btn-black {
+    background: #000;
+}
+
+.btn-white {
+    background: #fff;
+}
+
+
+/* header */
+header.header-bike {
+    position: absolute;
+    padding: 10px 0;
+    width: 100%;
+    /* background: red; */
+}
+
+.menu-mobile {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+}
+
+.menu-mobile span {
+    display: inline-block;
+    width: 35px;
+    height: 1px;
+    background: #000;
+}
+
+.menu-mobile span:nth-of-type(1) {
+    width: 25px;
+}
+
+.menu-mobile span:nth-of-type(2) {
+    width: 30px;
+}
+
+/* webbaner */
+section.webbanner {
+    min-height: 100vh;
+}
+
+/* aba2 */
+.sideone {
+    background: url(assets/img/bike01.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 50vh;
+}
+
+.sidetwo {
+    background: url(assets/img/bike02.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 50vh;
+}
+
+/* aba4 */
+section.aba-video {
+    background: url(assets/img/video.jpg) no-repeat center center;
+    background-size: cover;
+}
+video.video-full {
+    width: 100%;
+}
+
+.aba-video:after {
+    content: url(assets/svg/icon-play.svg);
+    display: inline-block;
+    width: 50px;
+    position: absolute;
+    cursor: pointer;
+}
+
+@media(min-width:1024px) {
+    .logo img {
+        width: 120px;
+    }
+    
+    .font-default h1 {
+        font-size: 54px;
+    }
+
+    .font-default h2 {
+        font-size: 36px;
+    }
+
+    .font-default h3 {
+        font-size: 28px;
+    }
+
+    .btn-default {
+        padding: 15px 25px;
+    }
+
+    section.webbanner,
+    .sideone, .sidetwo {
+        min-height: auto;
+        min-height: 550px;
+    }
+
+    .bike-absolut img {
+        max-height: 300px;
+        width: 100%;
+    }
+
+    .aba-video:after {
+        width: 120px;
+    }
+}
+
+@media(min-width:1280px) {
+    .font-default h1 {
+        font-size: 54px;
+    }
+
+    .font-default p {
+        font-size: 16px;
+    }
+}
