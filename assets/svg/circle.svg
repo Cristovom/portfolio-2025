@@ -1,0 +1,46 @@
+<svg class="rotating-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .rotating-svg {
+            width: 100px;
+            height: 100px;
+            animation: rotate 5s linear infinite;
+            border-top: 1px solid #d4d4d4;
+            border-radius: 50px;
+        }
+
+        @keyframes rotate {
+            from {
+            transform: rotate(0deg);
+            }
+            to {
+            transform: rotate(360deg);
+            }
+        }
+
+        text {
+            font-size: 20px;
+            fill: white;
+        }
+
+        .year {
+            fill: #8cfdff; /* Azul claro */
+        }
+    </style>
+    
+    <!-- Círculo de fundo -->
+    <circle cx="100" cy="100" r="75" fill="black" />
+    
+    <!-- Texto superior (Ano) -->
+    <path id="topText" d="M 50,100 A 50,50 0 1,1 150,100" fill="none" />
+    <text>
+        <textPath href="#topText" startOffset="50%" text-anchor="middle" class="year">
+        2024
+        </textPath>
+    </text>
+
+    <!-- Texto inferior -->
+    <path id="bottomText" d="M 150,100 A 50,50 0 1,1 50,100" fill="none" />
+    <text>
+        <textPath href="#bottomText" startOffset="50%" text-anchor="middle">PORTFÓLIO</textPath>
+    </text>
+</svg>

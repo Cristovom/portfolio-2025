@@ -37,6 +37,7 @@ img {
     border-radius: 50px;
     color: #000;
     display: inline-block;
+    transition: .6s ease-in-out;
 }
 
 .btn-outline {
@@ -51,6 +52,24 @@ img {
     background: #fff;
 }
 
+.btn-outline:hover {
+    background: #000;
+    color: #fff;
+    transition: .6s ease-in-out;
+}
+
+.btn-black:hover {
+    background: #fff;
+    color: #000 !important;
+    transition: .6s ease-in-out;
+}
+
+.btn-white:hover {
+    color: #fff;
+    background: #000;
+    transition: .6s ease-in-out;
+}
+
 
 /* header */
 header.header-bike {
@@ -58,6 +77,10 @@ header.header-bike {
     padding: 10px 0;
     width: 100%;
     /* background: red; */
+}
+
+.logo img {
+    width: 120px;
 }
 
 .menu-mobile {
@@ -117,10 +140,6 @@ video.video-full {
 }
 
 @media(min-width:1024px) {
-    .logo img {
-        width: 120px;
-    }
-    
     .font-default h1 {
         font-size: 54px;
     }
@@ -160,5 +179,17 @@ video.video-full {
 
     .font-default p {
         font-size: 16px;
+    }
+
+    section.webbanner {
+        min-height: 700px;
+    }
+
+    .sideone, .sidetwo {
+        min-height: 100vh;
+    }
+
+    .bike-absolut img {
+        max-height: 400px;
     }
 }

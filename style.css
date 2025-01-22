@@ -1,0 +1,349 @@
+/* FONTS */
+@font-face {
+    font-family: Canela;
+    src: url(assets/fonts/canela.woff2) format("woff2");
+    font-weight: 400;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(assets/fonts/roboto.woff2) format("woff2");
+    font-weight: 400;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr Light";
+    src: url(fonts/HelveticaNeueCyr-Light.woff2) format("woff2"),url(fonts/HelveticaNeueCyr-Light.woff) format("woff"),url(fonts/HelveticaNeueCyr-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "HelveticaNeueCyr Roman";
+    src: url(fonts/HelveticaNeueCyr-Roman.woff2) format("woff2"),url(fonts/HelveticaNeueCyr-Roman.woff) format("woff"),url(fonts/HelveticaNeueCyr-Roman.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Fff Acidgrotesk Regular';
+    src: url('https://cdn.prod.website-files.com/65c4b4da44785bd5a7210c55/65c4d9f0825c6b7a00d50afb_FFF-AcidGrotesk-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fff Acidgrotesk Medium';
+    src: url('https://cdn.prod.website-files.com/65c4b4da44785bd5a7210c55/65c4d9f0f1b84de8d7e045a8_FFF-AcidGrotesk-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fff Acidgrotesk Bold';
+    src: url('https://cdn.prod.website-files.com/65c4b4da44785bd5a7210c55/65c4d9f08b3b7e3a11edc7ff_FFF-AcidGrotesk-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Default */
+html, body {
+    scroll-behavior: smooth;
+    font-family: 'Fff Acidgrotesk Regular';
+    background: #f3f3f3;
+}
+
+h1,h2,b {
+    font-family: 'Fff Acidgrotesk Bold';
+}
+
+.over-hidden {
+    overflow: hidden;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+/* Header */
+
+
+
+
+/* Main */
+section.box-main {
+    background: #8184d2;
+    padding: 30px;
+    color: #fff;
+    position: relative;
+}
+
+.radius-default {
+    border-radius: 12px;
+}
+
+section.box-main a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section.box-main h2 {
+    font-size: 36px;
+    line-height: 1.2em;
+    margin: 0 0 10px;
+}
+
+section.box-main h2 e {
+    font-weight: 100;
+}
+
+section.box-main figure img {
+    width: 100%;
+    height: 180px;
+    background: red;
+}
+
+section.box-main figure {
+    margin: 0;
+    padding: 20px 0 0;
+    width: 80%;
+    justify-self: self-end;
+}
+
+section.box-main span.about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, #f3f3f3 65%, transparent 65%);
+    color: #000;
+    padding: 15px;
+    font-size: 14px;
+    width: 130px;
+}
+
+section.grid h1 {
+    font-size: 70px;
+    padding: 20px 10px;
+    margin: 0;
+}
+
+.grid .box1 {
+    width: 60%;
+    min-height: 130px;
+    background: red;
+}
+
+.grid .d-flex.justify-content-between {
+    flex-flow: wrap;
+}
+
+.grid .box2 {
+    width: 35%;
+    background: #a9d9d7;
+    position: relative;
+}
+
+.grid .box2 span.projects:last-child {
+    background: #8e6fbe;
+    border-radius: 0 0 12px 12px;
+    color: #fff;
+}
+
+span.projects {
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+span.projects b, .box4 b {font-size: 20px;}
+
+.grid .box3 {
+    background: #585858;
+    color: #fff;
+    width: 40%;
+    min-height: 130px;
+}
+
+.pt-3 {
+    padding-top: 20px;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.box4 {
+    background: #000;
+    width: 55%;
+    position: relative;
+}
+
+i.icon-global {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: red;
+    position: absolute;
+    left: 25px;
+    top: calc(50% - 20px);
+}
+
+span.position-absolute {
+    background: #fec267;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(55% - 60px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    font-size: 16px;
+}
+
+aside.redes-socials {
+    width: 100%;
+    min-height: 50px;
+    /* background: red; */
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 10px;
+}
+
+aside.redes-socials a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: brightness(0.5);
+}
+
+a.item.icon-redes.insta {
+    background-image: url(assets/svg/insta.svg);
+}
+
+a.item.icon-redes.linkedin {
+    background-image: url(assets/svg/linkedin.svg);
+}
+
+a.item.icon-redes.behance {
+    background-image: url(assets/svg/behance.svg);
+}
+
+a.item.icon-redes.insta {
+    background-image: url(assets/svg/insta.svg);
+}
+
+.rotating-svg {
+    width: 100px;
+    height: 100px;
+    animation: rotate 5s linear infinite;
+    border-top: 1px solid #585858;
+    border-radius: 50px;
+    align-self: self-end;
+}
+
+@keyframes rotate {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}
+
+text {
+    font-size: 20px;
+    fill: white;
+}
+
+.year {
+    fill: #8cfdff; /* Azul claro */
+}
+
+@media(min-width:1024px) {
+    main.main {
+        display: grid;
+        grid-template-columns: 3% 40% 49%;
+        grid-template-areas:
+            "redes about portfolio";
+        grid-gap: 1;
+        grid-gap: 3%;
+        min-height: calc(100vh - 56px);
+        padding: 20px 0;
+    }
+    
+    section.box-main {
+        grid-area: about;
+    }
+    
+    section.grid {
+        grid-area: portfolio;
+    }
+    
+    aside.redes-socials {
+        grid-area: redes;
+        flex-direction: column;
+        justify-content: space-evenly;
+        grid-gap: 0;
+        padding-left: 10px;
+    }
+    
+    section.box-main figure img {
+        height: 300px;
+    }
+    
+    section.box-main h2 {
+        font-size: 50px;
+    }
+    
+    .rotating-svg {
+        width: 150px;
+        height: 150px;
+        border: none;
+    }
+    
+    section.box-main a {
+        font-size: 18px;
+    }
+    
+    section.grid h1 {
+        font-size: 115px;
+        line-height: 1.2em;
+        padding: 0 0 20px;
+    }
+    
+    .grid .box1 {
+        min-height: 190px;
+    }
+    
+    span.projects {
+        padding: 26px 20px;
+    }
+    
+    .grid .box3 {
+        min-height: 149px;
+    }
+}

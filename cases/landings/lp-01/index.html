@@ -6,7 +6,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <title>LP - 01</title>
-    <link rel="shortcut icon" href="assets/svg/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -23,7 +23,9 @@
                     <span></span>
                 </div>
                 <div class="logo col-6 col-md-4">
-                    <img src="assets/img/logo-min.png" alt="Logo" loading="lazy">
+                    <a href="#" role="link" aria-label="Logo" class="d-inline-block">
+                        <img src="assets/img/logo-min.png" alt="Logo" loading="lazy">
+                    </a>
                 </div>
                 <nav class="nav-links d-none d-md-block col-4">
                     <ul class="list-inline d-flex flex-wrap justify-content-between align-items-center m-0">
@@ -78,7 +80,7 @@
                     <div class="desc-bike">
                         <h3 class="m-0 text-white">Classic</h3>
                         <p class="m-0 text-white py-2 pb-3">
-                            Meet the Classic and you've found one agile ride with an incredibly swift side. Gain serious power on an electric bike that's built around you.
+                            Meet the Classic and you've found one agile ride with an incredibly swift <br class="d-none d-md-block">side. Gain serious power on an electric bike that's built around you.
                         </p>
                         <a href="#" class="text-decoration-none btn-default btn-white" role="link" aria-label="Start Your Ride">Start Your Ride</a>
                     </div>
@@ -86,9 +88,9 @@
                 <div class="align-items-end col-12 col-md-6 d-flex p-3 py-5 sidetwo px-md-5">
                     
                     <div class="desc-bike">
-                        <h3 class="m-0 text-white">Classic</h3>
+                        <h3 class="m-0 text-white">Cruiser</h3>
                         <p class="m-0 text-white py-2 pb-3">
-                            Meet the Classic and you've found one agile ride with an incredibly swift side. Gain serious power on an electric bike that's built around you.
+                            Meet the Cruiser for an elevated take on the classic Cowboy. A higher <br class="d-none d-md-block">vantage gives you a comfortable advantage with an electric bike that's <br class="d-none d-md-block">built around you.
                         </p>
                         <a href="#" class="text-decoration-none btn-default btn-white" role="link" aria-label="Start Your Ride">Start Your Ride</a>
                     </div>
@@ -99,16 +101,16 @@
         <!-- aba3 -->
         <section class="aba3 pt-5 bc-bege">
             <div class="d-flex flex-wrap justify-content-center px-3">
-                <div class="text-center col-12">
+                <div class="text-center col-12 pt-xl-4">
                     <h2 class="m-0">
                         Your Ride, Your Way— <br class="d-none d-md-block">Powered by the Cowboy App
                     </h2>
-                    <p class="m-0 py-2 pb-3">
+                    <p class="m-0 py-2 pb-3 py-xl-4">
                         Unlock the full potential of your Cruiser & Classic bike with <br class="d-none d-md-block">seamless app integration.
                     </p>
                     <a href="#" class="text-decoration-none btn-default btn-black text-white" role="link" aria-label="Download App">Download App</a>
                 </div>
-                <div class="bike-absolut pt-4">
+                <div class="bike-absolut pt-4 pt-xl-5">
                     <img src="assets/img/bike03-min.png" alt="" loading="lazy">
                 </div>
             </div>
@@ -121,6 +123,24 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        let jogador = {
+            name: 'Lionel Messi',
+            age: 37,
+            club: 'Inter Miami',
+            nacionality: 'Argentino',
+            trophies: 40,
+            melhorDoMundo: 8
+        }
+
+        let { name, age, club, nacionality, trophies, melhorDoMundo } = jogador;
+        
+        console.log(`O ${name}, ${nacionality} tem ${age} anos de idade e atualmente joga no ${club} já no final da carreira com ${trophies} trofeús conquistados e de bagagem sendo ${melhorDoMundo} vezes melhor do mundo`);
+
+    </script>
 </body>
 </html>
