@@ -57,11 +57,16 @@
 html, body {
     scroll-behavior: smooth;
     font-family: 'Fff Acidgrotesk Regular';
-    background: #f3f3f3;
+    background: #f0f0f0;
 }
 
 h1,h2,b {
     font-family: 'Fff Acidgrotesk Bold';
+}
+
+::selection {
+    background: #f6c4dd;
+    color: #00000095;
 }
 
 .over-hidden {
@@ -76,14 +81,22 @@ h1,h2,b {
     justify-content: space-between;
 }
 
-/* Header */
+.flex-column {
+    flex-direction: column;
+}
 
+.m-0 {
+    margin:0;
+}
 
-
+.p-0 {
+    padding: 0;
+}
 
 /* Main */
 section.box-main {
-    background: #8184d2;
+    background: #2c8d93;
+    /* background: #19abdf; */
     padding: 30px;
     color: #fff;
     position: relative;
@@ -111,7 +124,7 @@ section.box-main h2 e {
 section.box-main figure img {
     width: 100%;
     height: 180px;
-    background: red;
+    background: #73aacc;
 }
 
 section.box-main figure {
@@ -126,7 +139,7 @@ section.box-main span.about {
     top: 0;
     left: 0;
     background: linear-gradient(135deg, #f3f3f3 65%, transparent 65%);
-    color: #000;
+    color: #09080d;
     padding: 15px;
     font-size: 14px;
     width: 130px;
@@ -136,12 +149,48 @@ section.grid h1 {
     font-size: 70px;
     padding: 20px 10px;
     margin: 0;
+    color: #09080d;
 }
 
 .grid .box1 {
     width: 60%;
     min-height: 130px;
-    background: red;
+    /* background: red; */
+}
+
+.box1 figure {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+    /* height: 100%; */
+    /* overflow-y: scroll; */
+    /* position: absolute; */
+    inset: 0;
+    border-radius: 12px;
+    scroll-snap-align: start;
+}
+
+.box1.radius-default {
+    position: relative;
+    overflow-y: scroll;
+    height: 206px;
+    scroll-snap-type: y mandatory;
+
+    &::-webkit-scrollbar {
+        background: #09080d10;
+        width: 5px;
+        border-radius: 10px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: #2c8d93;
+        border-radius: 10px;
+    }
+}
+
+.box1 figure img {
+    width: 100%;
 }
 
 .grid .d-flex.justify-content-between {
@@ -150,14 +199,14 @@ section.grid h1 {
 
 .grid .box2 {
     width: 35%;
-    background: #a9d9d7;
+    background: #2c8d93;
     position: relative;
 }
 
 .grid .box2 span.projects:last-child {
-    background: #8e6fbe;
+    background: #73aacc;
     border-radius: 0 0 12px 12px;
-    color: #fff;
+    color: #09080d;
 }
 
 span.projects {
@@ -166,12 +215,13 @@ span.projects {
     width: 100%;
     box-sizing: border-box;
     font-size: 16px;
+    color: #fff;
 }
 
 span.projects b, .box4 b {font-size: 20px;}
 
 .grid .box3 {
-    background: #585858;
+    background: #bcbb99;
     color: #fff;
     width: 40%;
     min-height: 130px;
@@ -199,14 +249,14 @@ i.icon-global {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: red;
+    background: #fff;
     position: absolute;
     left: 25px;
     top: calc(50% - 20px);
 }
 
 span.position-absolute {
-    background: #fec267;
+    background: #909c92;
     position: absolute;
     right: 0;
     top: 0;
@@ -217,12 +267,12 @@ span.position-absolute {
     justify-content: center;
     padding: 0 30px;
     font-size: 16px;
+    color: #000;
 }
 
 aside.redes-socials {
     width: 100%;
     min-height: 50px;
-    /* background: red; */
     margin: 20px 0;
     display: flex;
     align-items: center;
@@ -232,12 +282,12 @@ aside.redes-socials {
 
 aside.redes-socials a {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    filter: brightness(0.5);
+    filter: brightness(0) saturate(100%) invert(1%) sepia(15%) saturate(7454%) hue-rotate(234deg) brightness(101%) contrast(97%);
 }
 
 a.item.icon-redes.insta {
@@ -254,6 +304,10 @@ a.item.icon-redes.behance {
 
 a.item.icon-redes.insta {
     background-image: url(assets/svg/insta.svg);
+}
+
+a.item.icon-redes.github {
+    background-image: url(assets/svg/github.svg);
 }
 
 .rotating-svg {
@@ -280,7 +334,7 @@ text {
 }
 
 .year {
-    fill: #8cfdff; /* Azul claro */
+    fill: #bcbb99; /* Azul claro */
 }
 
 @media(min-width:1024px) {
