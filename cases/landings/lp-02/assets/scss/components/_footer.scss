@@ -1,0 +1,7 @@
+@use '../abstract/variaveis';
+
+footer {
+    background: variaveis.$cor-quartenaria;
+    padding: 30px 10px;
+    text-align: center;
+}

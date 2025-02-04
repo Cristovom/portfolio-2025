@@ -1,0 +1,68 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+section#contatos {
+    @include mixins.margemCentral(80%);
+    padding-bottom: 30px;
+
+    .contatos-imgs {
+        display: flex;
+        flex-flow: wrap;
+        padding-bottom: 10px;
+        
+        img {
+            padding: 10px;
+        }
+        
+        & img:nth-of-type(n+2) {
+            width: 50%;
+        }
+    }
+
+    .contatos-form {
+        background: variaveis.$gradiente-primario;
+        padding: 30px;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        h4 {
+            @include mixins.fontDefault(variaveis.$ft-titulos, 1.2rem, 1.4rem, 500, variaveis.$cor-secundaria);
+        }
+
+        p {
+            @include mixins.fontDefault(variaveis.$ft-textos, 1rem, 1.2rem, 300, variaveis.$cor-primaria);
+        }
+
+        .inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .form-group {
+                @extend .inputs;
+                gap: .5rem;
+
+                label {
+                    @include mixins.fontDefault(variaveis.$ft-textos, 1rem, 1.2rem, 600, variaveis.$cor-primaria);
+                }
+
+                input {
+                    padding: 12px 25px;
+                    border-radius: 30px;
+                    border: none;
+                    outline: none;
+                }
+
+                textarea {
+                    @extend input;
+                }
+            }
+
+            button {
+                @include mixins.btnDefault(variaveis.$cor-secundaria, variaveis.$cor-branco, variaveis.$cor-terciaria);
+            }
+        }
+    }
+}

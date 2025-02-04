@@ -1,0 +1,45 @@
+@use '../abstract/variaveis';
+// header
+header {
+    background: variaveis.$gradiente-primario;
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 30px 0;
+        
+        img {
+            max-width: 150px;
+        }
+        
+        span {
+            display: inline-block;
+            background: #000;
+            width: 80%;
+            height: 1px;
+        }
+        
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: variaveis.$cor-primaria;
+                font-size: 1rem;
+                line-height: 1.2rem;
+                font-family: variaveis.$ft-textos;
+                transition: .3s ease-in-out;
+
+                &:hover {
+                    font-weight: 600;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+    }
+}

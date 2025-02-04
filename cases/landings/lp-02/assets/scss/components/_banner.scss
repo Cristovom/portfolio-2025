@@ -1,0 +1,27 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+// banner
+section#home {
+    padding: 0 30px 30px;
+
+    h1 {
+        font-size: 2rem;
+        line-height: 3rem;
+        color: variaveis.$cor-primaria;
+        font-family: variaveis.$ft-titulos;
+        
+        span {
+            color: variaveis.$cor-secundaria;
+        }
+    }
+    
+    .btn-main {
+        @include mixins.btnDefault(variaveis.$cor-secundaria, variaveis.$cor-branco, variaveis.$cor-terciaria);
+    }
+    
+    img {
+        max-width: 100%;
+        transform: translateX(-15px);
+    }
+}
