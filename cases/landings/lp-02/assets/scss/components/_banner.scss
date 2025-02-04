@@ -25,3 +25,21 @@ section#home {
         transform: translateX(-15px);
     }
 }
+
+@media(min-width:1024px) {
+    section#home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        @include mixins.margemCentral(80%);
+
+        .textos-home {
+            max-width: 500px;
+        }
+
+        .img-home {
+            @extend .textos-home;
+        }
+    }
+}

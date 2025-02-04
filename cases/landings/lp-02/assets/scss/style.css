@@ -80,6 +80,19 @@ section#home img {
   transform: translateX(-15px);
 }
 
+@media (min-width: 1024px) {
+  section#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 80%;
+  }
+  section#home .textos-home, section#home .img-home {
+    max-width: 500px;
+  }
+}
 section#nosso-espaco {
   margin: 0 auto;
   width: 80%;
