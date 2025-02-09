@@ -81,6 +81,10 @@ h1,h2,b {
     justify-content: space-between;
 }
 
+.justify-content-around {
+    justify-content: space-around;
+}
+
 .flex-column {
     flex-direction: column;
 }
@@ -216,6 +220,7 @@ span.projects {
     box-sizing: border-box;
     font-size: 16px;
     color: #fff;
+    height: 50%;
 }
 
 span.projects b, .box4 b {font-size: 20px;}
@@ -343,7 +348,6 @@ text {
         grid-template-columns: 3% 40% 49%;
         grid-template-areas:
             "redes about portfolio";
-        grid-gap: 1;
         grid-gap: 3%;
         min-height: calc(100vh - 56px);
         padding: 20px 0;
@@ -351,10 +355,12 @@ text {
     
     section.box-main {
         grid-area: about;
+        height: calc(100vh - 106px);
     }
     
     section.grid {
         grid-area: portfolio;
+        height: calc(100vh - 56px);
     }
     
     aside.redes-socials {
@@ -387,6 +393,8 @@ text {
         font-size: 115px;
         line-height: 1.2em;
         padding: 0 0 20px;
+        /* padding: 0; */
+        height: calc(min(25%, 25vh) - 42px);
     }
     
     .grid .box1 {

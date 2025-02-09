@@ -7,6 +7,10 @@ section#desconto {
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media(min-width:1024px) {
+        padding: 30px 0 90px;
+    }
+
     img {
         width: 10%;
         object-fit: contain;
@@ -15,6 +19,13 @@ section#desconto {
     .desconto-form {
         text-align: center;
         width: 80%;
+
+        @media(min-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
 
         h4 {
             @include mixins.fontDefault(variaveis.$ft-titulos, 1.6rem, 1.8rem, 500, variaveis.$cor-primaria);
@@ -45,6 +56,15 @@ section#desconto {
                 outline: none;
                 background: variaveis.$cor-secundaria;
                 color: variaveis.$cor-branco;
+                cursor: pointer;
+            }
+
+            @media(min-width:1024px) {
+                min-width: 610px;
+
+                button {
+                    padding: 15px 35px;
+                }
             }
         }
     }

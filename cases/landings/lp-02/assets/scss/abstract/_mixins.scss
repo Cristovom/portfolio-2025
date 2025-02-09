@@ -1,6 +1,7 @@
 @mixin margemCentral($width) {
     margin: 0 auto;
     width: $width;
+    max-width: 1300px;
 }
 
 @mixin fontDefault($ft-fa, $ft-fs, $ft-lh, $ft-w, $cl) {

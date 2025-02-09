@@ -88,6 +88,7 @@ section#home img {
     gap: 2rem;
     margin: 0 auto;
     width: 80%;
+    max-width: 1300px;
   }
   section#home .textos-home, section#home .img-home {
     max-width: 500px;
@@ -96,6 +97,7 @@ section#home img {
 section#nosso-espaco {
   margin: 0 auto;
   width: 80%;
+  max-width: 1300px;
   padding: 2rem 0;
 }
 section#nosso-espaco .detalhes {
@@ -124,6 +126,27 @@ section#nosso-espaco .detalhes .espaco-textos p {
   line-height: 1.2rem;
   font-weight: 300;
   color: #0C0421;
+}
+@media (min-width: 1024px) {
+  section#nosso-espaco .detalhes {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5rem;
+  }
+  section#nosso-espaco .detalhes .imgs-espaco, section#nosso-espaco .detalhes .espaco-textos {
+    width: 50%;
+  }
+  section#nosso-espaco .detalhes:last-child {
+    flex-direction: row-reverse;
+    padding-top: 30px;
+  }
+  section#nosso-espaco .detalhes:last-child .imgs-espaco, section#nosso-espaco .detalhes:last-child .espaco-textos {
+    display: flex;
+    gap: 20px;
+  }
+  section#nosso-espaco .detalhes:last-child .imgs-espaco img, section#nosso-espaco .detalhes:last-child .espaco-textos img {
+    width: 50%;
+  }
 }
 
 section#servico {
@@ -175,12 +198,30 @@ section#servico .cards .card:hover {
           backdrop-filter: brightness(0.95);
   transition: 0.3s ease-in-out;
 }
+@media (min-width: 1024px) {
+  section#servico .cards, section#servico .cards .card {
+    gap: 0.8rem;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    max-width: 1300px;
+  }
+  section#servico .cards .cards, section#servico .cards .card {
+    width: 32%;
+    min-height: 400px;
+  }
+}
 
 section#desconto {
   padding: 30px 0 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+@media (min-width: 1024px) {
+  section#desconto {
+    padding: 30px 0 90px;
+  }
 }
 section#desconto img {
   width: 10%;
@@ -190,6 +231,14 @@ section#desconto img {
 section#desconto .desconto-form {
   text-align: center;
   width: 80%;
+}
+@media (min-width: 1024px) {
+  section#desconto .desconto-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 section#desconto .desconto-form h4 {
   font-family: "Krona One", sans-serif;
@@ -225,11 +274,21 @@ section#desconto .desconto-form .input-btn button {
   outline: none;
   background: #4e75ff;
   color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  section#desconto .desconto-form .input-btn {
+    min-width: 610px;
+  }
+  section#desconto .desconto-form .input-btn button {
+    padding: 15px 35px;
+  }
 }
 
 section#contatos {
   margin: 0 auto;
   width: 80%;
+  max-width: 1300px;
   padding-bottom: 30px;
 }
 section#contatos .contatos-imgs {
@@ -302,9 +361,38 @@ section#contatos .contatos-form .inputs button:hover {
   background: #85a0ff;
   transition: 0.3s ease-in-out;
 }
+@media (min-width: 1024px) {
+  section#contatos {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  section#contatos .contatos-imgs {
+    width: 48%;
+  }
+  section#contatos .contatos-imgs img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 30px;
+  }
+  section#contatos .contatos-form {
+    width: 48%;
+    justify-content: center;
+  }
+}
 
 footer {
   background: #e8f5c8;
   padding: 30px 10px;
   text-align: center;
+  font-family: "Monstserrat", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 600;
+  color: #0C0421;
+}
+@media (min-width: 1024px) {
+  footer {
+    padding: 15px 10px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -65,4 +65,24 @@ section#contatos {
             }
         }
     }
+
+    @media(min-width:1024px) {
+        display: flex;
+        justify-content: space-between;
+        gap: .5rem;
+
+        .contatos-imgs {
+            width: 48%;
+
+            img {
+                object-fit: cover;
+                border-radius: 30px;
+            }
+        }
+
+        .contatos-form {
+            width: 48%;
+            justify-content: center;
+        }
+    }
 }

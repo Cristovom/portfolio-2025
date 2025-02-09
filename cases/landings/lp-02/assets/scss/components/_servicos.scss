@@ -43,5 +43,18 @@ section#servico {
                 transition: .3s ease-in-out;
             }
         }
+
+        @media(min-width: 1024px) {
+            gap: .8rem;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            max-width: 1300px;
+
+            .cards {
+                width: 32%;
+                min-height: 400px;
+            }
+        }
     }
 }

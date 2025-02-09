@@ -1,7 +1,14 @@
 @use '../abstract/variaveis';
+@use '../abstract/mixins';
 
 footer {
     background: variaveis.$cor-quartenaria;
     padding: 30px 10px;
     text-align: center;
+
+    @include mixins.fontDefault(variaveis.$ft-textos, .875rem, 1rem, 600, variaveis.$cor-primaria);
+
+    @media(min-width:1024px) {
+        padding: 15px 10px;
+    }
 }

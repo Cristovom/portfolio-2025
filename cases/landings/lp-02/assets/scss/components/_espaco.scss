@@ -27,18 +27,34 @@ section#nosso-espaco {
             }
         }
     }
+
+    @media(min-width:1024px) {
+        .detalhes {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 5rem;
+
+            .imgs-espaco {
+                width: 50%;
+            }
+
+            .espaco-textos {
+                @extend .imgs-espaco;
+            }
+
+            &:last-child {
+                flex-direction: row-reverse;
+                padding-top: 30px;
+                
+                .imgs-espaco {
+                    display: flex;
+                    gap: 20px;
+
+                    img {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
 }
-
-// @media(min-width:1024px) {
-//     section#nosso-espaco {
-//         display: flex;
-//         flex-wrap: wrap;
-//         align-items: center;
-//         justify-content: center;
-//         gap: 1.6rem;
-//     }
-
-//     .detalhes {
-//         width: 40%;
-//     }
-// }
