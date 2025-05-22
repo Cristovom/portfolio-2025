@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI FALA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>1. Assistente de Voz Simples</h1>
+    <h2>O que você pode perguntar ao assistente?</h2>
+    <ul>
+        <li>"Que horas são?"</li>
+        <li>"Qual é a data de hoje?"</li>
+        <li>"Me conte uma piada!"</li>
+        <li>"Qual é a capital do Brasil?"</li>
+        <li>"Abra o Google"</li>
+    </ul>
+
+    <button class="btn-pergunta">Clique aqui para perguntar</button>
+
+    <div class="content-request">
+        <h2>Área de resposta:</h2>
+        <p></p>
+    </div>
+
+    <script>
+        const pergunta = document.querySelector(".btn-pergunta");
+        pergunta.addEventListener("click", function() {
+            perguntaAi()
+        })
+
+        function perguntaAi() {
+            const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const recognition = new speechRecognition();
+            recognition.lang = "pt-br";
+            recognition.start();
+    
+            recognition.addEventListener("result", function(e) {
+                const perguntaDoUsuario = e.results[0][0].transcript.trim();
+                console.log(perguntaDoUsuario);
+
+                const listaPerguntas = [...document.querySelectorAll("ul li")].map(el => 
+                    el.innerText.replace(/["?]/g, '').trim()
+                );
+
+                const encontrouPergunta = listaPerguntas.some(pergunta => pergunta.toLowerCase() === perguntaDoUsuario.toLowerCase());
+
+                if (encontrouPergunta) {
+                    console.log('Pergunta reconhecida na lista!');
+                } else {
+                    console.log('Pergunta não encontrada.');
+                }
+
+                if (perguntaDoUsuario.toLowerCase() === 'que horas são') {
+                    const retornaData = new Date();
+                    document.querySelector(".content-request p").innerText = 
+                        `São ${retornaData.getHours()}:${retornaData.getMinutes()}:${retornaData.getSeconds()}`;
+                } else if (perguntaDoUsuario.toLowerCase() === 'abra o google') {
+                    window.location.href = 'https://www.google.com.br';
+                }
+            });
+        }
+
+    </script>
+
+    <!-- <h1>Fala que eu te escuto</h1>
+    <p class="resposta"></p>
+    <textarea id="teste" id=""></textarea>
+    <button onclick="falar()">Falar</button> -->
+
+    <!-- <script>
+        function falar() {
+            let textarea = document.querySelector("#teste").value;
+            let fala = new SpeechSynthesisUtterance(textarea);
+            fala.lang = 'pt-br';
+            fala.pitch = 1;
+            fala.rate = 1;
+            speechSynthesis.speak(fala);
+        }
+    </script> -->
+    <!-- <script src="assets/js/main.js"></script> -->
+</body>
+</html>
