@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('font/NeoSansStd-Light.woff2') format('woff2'),
+        url('font/NeoSansStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('font/NeoSansStd-Bold.woff2') format('woff2'),
+        url('font/NeoSansStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neo Sans Std';
+    src: url('font/NeoSansStd-Regular.woff2') format('woff2'),
+        url('font/NeoSansStd-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    background: white;
+    font-family: 'Neo Sans Std';
+}
+
+.graficos-padrao {
+    width: 100%;
+}
+
+.flex-content {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.graficos-padrao select,
+#chartDataForm button {
+    background: #00c8c3;
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    color: #004e62;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+}
+
+#chartDataForm hr {
+    color: #00c8c3;
+    width: 100%;
+    opacity: .5;
+    margin: 5px;
+}
+
+.graficos-padrao span {
+    font-size: 11px;
+    line-height: 16px;
+    text-align: end;
+    width: 100%;
+    display: inline-block;
+    font-weight: 500;
+    color: #2d4d5f;
+}
+
+.head-qr .m-auto.d-flex.justify-content-between.align-items-center {
+    padding: 0 30px;
+}
+
+form {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 20px;
+    border: 1px solid #8184d2;
+    border-radius: 20px;
+    padding: 30px;
+    max-width: calc(100% - 50px);
+    /* max-width: 800px; */
+}
+
+.aside-input {
+    display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    /* justify-content: center; */
+    width: 100%;
+    grid-gap: 20px;
+}
+
+.aside-input label {
+    width: 50%;
+}
+
+.aside-input select, .aside-input input {
+    width: 40%;
+    border: 1px solid #8184d2;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* new */
+div.w-50.m-auto.p-4.mt-5 {
+    background: #f8f6f4;
+    border-radius: 12px;
+    max-width: 800px;
+}
+
+div.w-50.m-auto.p-4.mt-5 .grafico-perfis {
+    flex-wrap: nowrap !important;
+}
+
+/* .grafico-perfis {
+    max-width: 200px;
+    margin: 0 auto;
+} */
+
+.colum-grafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    grid-gap: 0px;
+    width: 20%;
+}
+
+.colum-grafico .valColumn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2d4d5f;
+}
+
+.colum-grafico .legendaColumn {
+    font-size: 7px;
+    font-weight: 500;
+    margin-top: 20px;
+    white-space: nowrap;
+    color: #2d4d5f;
+}
+
+.colum-grafico .heightColumn {
+    position: relative;
+    background: #6c85a5;
+    border-radius: 7px;
+    width: 55px;
+}
+
+.planos .colum-grafico:nth-of-type(1) .heightColumn {
+    background: #6c85a5;
+}
+
+.planos .colum-grafico:nth-of-type(2) .heightColumn {
+    background: #006D2C;
+}
+
+.planos .colum-grafico:nth-of-type(3) .heightColumn {
+    background: #B2A900;
+}
+
+.planos .colum-grafico:nth-of-type(4) .heightColumn {
+    background: #C65F0A;
+}
+
+.planos .colum-grafico:nth-of-type(5) .heightColumn {
+    background: #9E0000;
+}
+
+.colum-grafico .heightColumn:before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 8px;
+    background: #2d4d5f;
+    left: 0;
+    border-radius: 12px;
+}
+
+.colum-grafico .heightColumn:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 100%;
+    height: 8px;
+    background: #2d4d5f;
+    left: 0;
+    border-radius: 12px;
+}
+
+.recebe-html-clipboard {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(100% - 50px);
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 12px;
+    color: #fff;
+    border: 2px solid #f6c4dd;
+}
+
+.perfis .colum-grafico {
+    width: 14%;
+}
+
+button#generate-qr-btn, button#download-qr-btn {
+    background: linear-gradient(45deg, #8184d2, #f6c4dd);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+
+body .head-qr {
+    background: linear-gradient(45deg, #8184d2, #f6c4dd);
+    color: #fff;
+}
+
+a.link-pages {
+    width: auto;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background: #fff;
+    color: #8184d2;
+}
+
+.align-items-center.d-flex.flex-wrap.gap-2.justify-content-between.m-auto {
+    max-width: 800px;
+}
+
+.align-items-center.d-flex.flex-wrap.gap-2.justify-content-between.m-auto {
+    padding: 0 20px;
+}
+
+#qrcode img {
+    width: 100%;
+    object-fit: cover;
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+@media(min-width:1024px) {
+    .m-auto.d-flex.justify-content-between.align-items-center.flex-wrap.gap-4, .recebe-html-clipboard, form {
+        max-width: 800px;
+    }
+    
+    .m-auto.d-flex.justify-content-between.align-items-center.flex-wrap.gap-4 {
+        padding: 0;
+    }
+
+    .recebe-html-clipboard {
+        flex-direction: column;
+    }
+
+    .centralizando {
+        margin: 50px auto !important;
+    }
+
+    .align-items-center.d-flex.flex-wrap.gap-2.justify-content-between.m-auto {
+        padding: 0;
+    }
+
+    .colum-grafico {
+        grid-gap: 5px;
+    }
+
+    .colum-grafico .heightColumn {
+        width: 63px;
+        border-radius: 12px;
+    }
+    
+    .colum-grafico .valColumn {
+        font-size: 22px;
+    }
+
+    .colum-grafico .legendaColumn {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .perfis .colum-grafico {
+        width: 14%;
+    }
+}
+
+@media(min-width:1280px) {
+    .grafico-perfis {
+        width: 90%;
+    }
+
+    .colum-grafico .heightColumn {
+        width: 70px;
+    }
+}
