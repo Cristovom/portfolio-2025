@@ -648,6 +648,7 @@ main.main-principal {
         gap: 30px;
         justify-content: space-between;
         margin: 20px auto;
+        height: calc(100vh - 40px);
     }
     
     aside.aside-left {
@@ -670,6 +671,7 @@ main.main-principal {
     
     aside.aside-right {
         width: 60%;
+        height: calc(100vh - 40px);
     }
     
     .font-default aside.aside-right h1 {
@@ -677,6 +679,14 @@ main.main-principal {
         text-align: left;
         font-size: 134px;
         line-height: 1em;
+    }
+
+    .grid-content .box-70 {
+        padding: 0;
+    }
+
+    .grid-content .box-30 .sub-content {
+        height: 100px;
     }
 }
 
@@ -694,8 +704,45 @@ main.main-principal {
         font-size: 14px;
     }
 
+    .box-me .redes-socials ul {
+        justify-content: flex-start;
+        gap: 30px;
+        padding-left: 0;
+    }
+
     .font-default aside.aside-right h1 {
         font-size: 171px;
+    }
+
+    .aside-right .grid-content:nth-of-type(3) .box-70, .aside-right .grid-content:nth-of-type(3) .box-30 {
+        height: 150px;
+        padding: 0;
+    }
+
+    .aside-right .grid-content:nth-of-type(2), .aside-right .grid-content:nth-of-type(3) {
+        height: calc(50vh - 171px / 2 - 40px);
+    }
+
+    .aside-right .grid-content .box-30 .sub-content {
+        height: 50%;
+    }
+
+    .aside-right .grid-content:nth-of-type(3) .box-30,
+    .aside-right .grid-content .box-70 {
+        height: 100%;
+        padding: 0;
+    }
+
+    .aside-right .grid-content:nth-of-type(3) .box-70,
+    .aside-right .grid-content .box-30 {
+        height: 100%;
+    }
+}
+
+@media(min-width:1366px) {
+    .font-default aside.aside-right h1 {
+        font-size: 183px;
+        height: 171px;
     }
 }
 
@@ -706,28 +753,51 @@ main.main-principal {
 
     .aside-right .grid-content:nth-of-type(2),
     .aside-right .grid-content:nth-of-type(3) {
-        height: calc(50vh - 171px / 2 - 40px);
+        height: calc(50vh - 235px / 2 - 40px);
     }
 
-    .aside-right .grid-content .box-30 .sub-content {
-        height: 50%;
+    .font-default aside.aside-right h1 {
+        font-size: 262px;
+        height: 235px;
     }
 
-    .aside-right .grid-content .box-70 {
-        height: 100%;
-        padding: 0;
+    .aside-right .grid-content:nth-of-type(3) .box-70 .sub-content {
+        width: 40%;
+        flex-direction: column;
+        justify-content: center;
     }
 
-    .aside-right .grid-content .box-30 {
-        height: 100%;
+    .box-me .image {
+        width: 60%;
+        height: 408px;
     }
 
-    .aside-right .grid-content:nth-of-type(3) .box-30 {
-        height: 100%;
-        padding: 0;
+    .box-me .desc h2 {
+        font-size: 80px;
     }
 
-    .aside-right .grid-content:nth-of-type(3) .box-70 {
-        height: 100%;
+    .rotating-svg {
+        width: 180px;
+        height: 180px;
+        border: none;
+    }
+
+    .box-me .desc a {
+        font-size: 22px;
+        padding-top: 30px;
+        display: inline-block;
+    }
+
+    .box-me .redes-socials ul a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .sub-content h2 {
+        font-size: 22px;
+    }
+
+    .sub-content h2 b {
+        font-size: 40px;
     }
 }
