@@ -213,6 +213,7 @@ a.item.icon-redes {
 .bg-yellow {
     background: #fec267;
     border-radius: 0 10px 10px 0;
+    width: 39%;
 }
 
 .bg-black {
@@ -237,6 +238,15 @@ main.main-principal {
     background: #efaeff;
     border-radius: 50%;
     transform: scale(0.8);
+    position: relative;
+}
+
+.box-me .image img {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    bottom: -15px;
+    left: 5px;
 }
 
 .box-me .desc {
@@ -303,6 +313,21 @@ main.main-principal {
 
 .sub-content h2 b {
     font-size: 24px;
+    line-height: 1em;
+}
+
+span.pt-10 {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.aside-right .grid-content:nth-of-type(2) .box-70 {
+    overflow-y: auto;
+    border-radius: 12px;
+}
+
+.aside-right .grid-content:nth-of-type(2) .box-70 p {
+    padding: 20px 0 10px;
 }
 
 .aside-right .grid-content:nth-of-type(3) .bg-black {
@@ -310,18 +335,37 @@ main.main-principal {
 }
 
 .aside-right .grid-content:nth-of-type(3) .box-30 {
-    height: 140px;
+    height: 200px;
     display: flex;
 }
 
 .aside-right .grid-content:nth-of-type(3) .box-70 {
     display: flex;
-    height: 180px;
+    height: 240px;
+}
+
+.aside-right .grid-content:nth-of-type(3) .box-70 img {
+    width: 40%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
 }
 
 .aside-right a:hover {
     filter: brightness(0.9);
     transition: .6s ease-in-out;
+}
+
+/* Spline */
+.aside-right .grid-content:nth-of-type(3) .box-30:after {
+    content: "";
+    display: inline-block;
+    background: linear-gradient(to right, #f6f6f6 17%, #585858 17%);
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    right: 20px;
+    width: 137px;
+    height: 36px;
 }
 
 /* box projetos */
@@ -550,10 +594,33 @@ section.projetos.viewer {
 
     .grid-content .box-70 {
         padding: 0;
+        height: 180px;
     }
 
     .grid-content .box-30 .sub-content {
-        height: 100px;
+        height: 90px;
+    }
+
+    .aside-right .grid-content:nth-of-type(3) .box-70 {
+        height: 205px;
+    }
+
+    .aside-right .grid-content:nth-of-type(3) .box-30 {
+        height: 165px;
+    }
+
+    .bg-yellow,
+    .aside-right .grid-content:nth-of-type(3) .box-70 img {
+        width: 50%;
+    }
+
+    .aside-right .grid-content:nth-of-type(2) .box-70 h2,
+    .aside-right .grid-content:nth-of-type(2) .box-70 p {
+        padding: 20px 30px;
+    }
+
+    .aside-right .grid-content:nth-of-type(2) .box-70 p {
+        padding-top: 0;
     }
 
     /* aba projetos */
@@ -607,6 +674,10 @@ section.projetos.viewer {
     /* carousel */
     .mySwiper .swiper-button-prev, .mySwiper .swiper-button-next {
         bottom: 0;
+    }
+
+    .aside-right .grid-content:nth-of-type(3) .box-30:after {
+        background: #585858;
     }
 }
 
@@ -671,6 +742,12 @@ section.projetos.viewer {
 
     .projetos .box-image img {
         height: 340px;
+    }
+
+    .aside-right .grid-content:nth-of-type(2) .box-70 {
+        height: 100%;
+        align-items: center;
+        display: flex;
     }
 }
 
@@ -739,5 +816,9 @@ section.projetos.viewer {
 
     .projetos .description-project p {
         font-size: 22px;
+    }
+
+    .aside-right .grid-content:nth-of-type(2) .box-70 p {
+        font-size: 18px;
     }
 }
