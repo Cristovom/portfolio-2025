@@ -1,31 +1,21 @@
 const btnProject = document.querySelectorAll(".open-projects");
 const btnTool = document.querySelector('a.btn-projects[data-project="tool"]');
 const btnLanding = document.querySelector('a.btn-projects[data-project="landing"]');
-
 const boxProjetosLanding = document.querySelector('.mySwiper[data-project="landing"]');
 const boxProjetosTool = document.querySelector('.mySwiper[data-project="tool"]');
 
-
 btnProject.forEach(btn => {
     btn.addEventListener('click', function() {
-        console.log(this.dataset.project);
         if(this.dataset.project == 'tool') {
             openProjects();
             btnTool.classList.add('active');
             boxProjetosLanding.style.display = 'none';
             boxProjetosTool.style.display = 'block';
-            // document.querySelector('a.btn-projects[data-project="tool"]').classList.add('active');
-            // document.querySelector('.mySwiper[data-project="landing"]').style.display = 'none';
-            // document.querySelector('.mySwiper[data-project="tool"]').style.display = 'block';
         } else {
             openProjects();
             btnLanding.classList.add('active');
             boxProjetosTool.style.display = 'none';
             boxProjetosLanding.style.display = 'block';
-
-            // document.querySelector('a.btn-projects[data-project="landing"]').classList.add('active');
-            // document.querySelector('.mySwiper[data-project="landing"]').style.display = 'block';
-            // document.querySelector('.mySwiper[data-project="tool"]').style.display = 'none';
         }
     })
 })
@@ -55,7 +45,6 @@ let ticking = false;
 
 function calcScroll() {
     let alturaPage = window.scrollY;
-    console.log(alturaPage);
     secProjects.style.top = alturaPage + 'px';
     ticking = false;
 }
@@ -80,3 +69,24 @@ btnTool.addEventListener('click', function() {
     boxProjetosTool.style.display = 'block';
     boxProjetosLanding.style.display = 'none';
 })
+
+// carousel projetos
+var swiper = new Swiper(".mySwiper", {
+    keyboard: true,
+    grabCursor: true,
+    effect: "creative",
+    creativeEffect: {
+        prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+        },
+        next: {
+            translate: ["100%", 0, 0],
+        },
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
