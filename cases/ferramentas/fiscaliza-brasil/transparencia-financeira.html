@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Transparência Financeira - Fiscaliza Brasil</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 text-gray-900">
+		<!-- HEADER -->
+        <header class="bg-white shadow p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Glossário Político</h1>
+                <input type="text" placeholder="Buscar por nome ou estado" class="p-2 border rounded w-64" />
+            </div>
+        </header>
+		<main class="container mx-auto mt-8">
+			<section class="mb-6">
+				<h1 class="text-2xl font-bold mb-2">Transparência Financeira</h1>
+				<p class="text-sm text-gray-700">
+					Visualize os gastos, salários, verbas de gabinete, doações de campanha e bens
+					declarados dos deputados federais.
+				</p>
+			</section>
+            <section class="bg-white p-6 rounded-xl shadow mb-8">
+                <h2 class="text-lg font-semibold mb-4">Resumo Financeiro de um Deputado</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm text-gray-800">
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <span class="font-semibold">Salário Mensal:</span><br />
+                        R$ 33.763,00
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <span class="font-semibold">Verba de Gabinete:</span><br />
+                        Até R$ 111.675,59/mês
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <span class="font-semibold">Auxílio Moradia:</span><br />
+                        R$ 4.253,00 (ou imóvel funcional)
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <span class="font-semibold">Cota Parlamentar:</span><br />
+                        Média de R$ 35.000/mês
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <span class="font-semibold">Doações em Campanha (última eleição):</span><br />
+                        R$ 1.800.000,00
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <span class="font-semibold">Bens Declarados ao TSE:</span><br />
+                        R$ 2.345.000,00
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-lg font-semibold mb-4">Ranking de Gastos com Verba Parlamentar</h2>
+                <table class="w-full text-sm text-left border border-gray-200">
+                    <thead class="bg-gray-100 text-gray-600">
+                        <tr>
+                            <th class="py-2 px-3 border">Deputado</th>
+                            <th class="py-2 px-3 border">UF</th>
+                            <th class="py-2 px-3 border">Partido</th>
+                            <th class="py-2 px-3 border">Total Gasto em 2024</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-800">
+                        <tr class="border-t">
+                            <td class="py-2 px-3">João Silva</td>
+                            <td class="py-2 px-3">SP</td>
+                            <td class="py-2 px-3">ABC</td>
+                            <td class="py-2 px-3">R$ 412.876,32</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-2 px-3">Maria Oliveira</td>
+                            <td class="py-2 px-3">MG</td>
+                            <td class="py-2 px-3">XYZ</td>
+                            <td class="py-2 px-3">R$ 398.220,80</td>
+                        </tr>
+                        <tr class="border-t">
+                            <td class="py-2 px-3">Carlos Souza</td>
+                            <td class="py-2 px-3">BA</td>
+                            <td class="py-2 px-3">QWE</td>
+                            <td class="py-2 px-3">R$ 376.412,97</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+		</main>
+        <footer class="mt-12 p-6 bg-white shadow-inner text-center text-sm text-gray-500">
+            Dados públicos da Câmara e Senado — Fiscaliza Brasil © 2025
+        </footer>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Comparar Deputados - Fiscaliza Brasil</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 text-gray-900">
+		<!-- HEADER -->
+        <header class="bg-white shadow p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Glossário Político</h1>
+                <input type="text" placeholder="Buscar por nome ou estado" class="p-2 border rounded w-64" />
+            </div>
+        </header>
+		<main class="container mx-auto mt-8">
+			<section class="mb-6">
+				<h1 class="text-2xl font-bold mb-2">Comparador de Deputados</h1>
+				<p class="text-sm text-gray-700">
+					Compare dados e desempenho político de dois deputados diferentes.
+				</p>
+			</section>
+            <section class="bg-white p-6 rounded-xl shadow mb-6">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Deputado 1</label>
+                        <input type="text" placeholder="Digite o nome" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Deputado 2</label>
+                        <input type="text" placeholder="Digite o nome" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </form>
+                <button class="w-full md:w-auto px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Comparar</button>
+                </section>
+
+                <section class="bg-white p-6 rounded-xl shadow">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Deputado 1 -->
+                    <div>
+                        <h2 class="text-lg font-semibold mb-2">Maria Souza (XYZ/SP)</h2>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Presença:</strong> 93%</li>
+                            <li><strong>Projetos Apresentados:</strong> 12</li>
+                            <li><strong>Votos A Favor:</strong> 56</li>
+                            <li><strong>Votos Contra:</strong> 14</li>
+                            <li><strong>Faltas Não Justificadas:</strong> 3</li>
+                            <li><strong>Partido:</strong> XYZ</li>
+                        </ul>
+                    </div>
+
+                    <!-- Deputado 2 -->
+                    <div>
+                        <h2 class="text-lg font-semibold mb-2">João Silva (ABC/RJ)</h2>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li><strong>Presença:</strong> 76%</li>
+                            <li><strong>Projetos Apresentados:</strong> 5</li>
+                            <li><strong>Votos A Favor:</strong> 32</li>
+                            <li><strong>Votos Contra:</strong> 28</li>
+                            <li><strong>Faltas Não Justificadas:</strong> 12</li>
+                            <li><strong>Partido:</strong> ABC</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+		</main>
+        <footer class="mt-12 p-6 bg-white shadow-inner text-center text-sm text-gray-500">
+            Dados públicos da Câmara e Senado — Fiscaliza Brasil © 2025
+        </footer>
+	</body>
+</html>

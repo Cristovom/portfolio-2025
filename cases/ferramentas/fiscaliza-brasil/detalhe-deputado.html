@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Deputado - Fiscaliza Brasil</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 text-gray-900">
+		<!-- HEADER -->
+        <header class="bg-white shadow p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Deputado</h1>
+                <input type="text" placeholder="Buscar por nome ou estado" class="p-2 border rounded w-64" />
+            </div>
+        </header>
+        
+		<main class="container mx-auto mt-8">
+			<section class="bg-white p-6 rounded-xl shadow mb-6">
+				<div class="flex items-center justify-between flex-wrap gap-4">
+					<div>
+						<h1 class="text-2xl font-bold">Maria Souza</h1>
+						<p class="text-sm text-gray-600">Partido XYZ - São Paulo</p>
+						<p class="text-sm text-gray-600">Mandato atual desde 2023</p>
+					</div>
+					<div class="text-right">
+						<p class="text-sm">
+							Presença:
+							<span class="font-semibold text-green-600">93%</span>
+						</p>
+						<p class="text-sm">
+							Projetos propostos:
+							<span class="font-semibold">12</span>
+						</p>
+						<p class="text-sm">
+							Projetos aprovados:
+							<span class="font-semibold">3</span>
+						</p>
+					</div>
+				</div>
+			</section>
+
+            <section class="bg-white p-6 rounded-xl shadow mb-6">
+                <h2 class="text-xl font-semibold mb-4">Participação em Votações</h2>
+                <div class="space-y-2">
+                    <div class="border p-3 rounded">
+                        <p class="text-sm"><span class="font-medium">PL 2045/2024</span> — Votou <span class="text-green-600 font-semibold">A favor</span></p>
+                    </div>
+                    <div class="border p-3 rounded">
+                        <p class="text-sm"><span class="font-medium">PEC 17/2024</span> — Votou <span class="text-red-600 font-semibold">Contra</span></p>
+                    </div>
+                    <div class="border p-3 rounded">
+                        <p class="text-sm"><span class="font-medium">PL 3001/2024</span> — <span class="text-gray-500 font-semibold">Ausente</span></p>
+                    </div>
+                    <!-- ... -->
+                </div>
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-xl font-semibold mb-4">Histórico</h2>
+                <ul class="list-disc pl-6 text-sm text-gray-700 space-y-1">
+                    <li>Secretária de Educação em São Paulo (2017–2020)</li>
+                    <li>Vereadora em Campinas (2013–2016)</li>
+                </ul>
+            </section>
+		</main>
+
+        <footer class="mt-12 p-6 bg-white shadow-inner text-center text-sm text-gray-500">
+            Dados públicos da Câmara e Senado — Fiscaliza Brasil © 2025
+        </footer>
+	</body>
+</html>

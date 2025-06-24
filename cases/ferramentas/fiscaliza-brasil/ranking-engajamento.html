@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ranking de Engajamento - Fiscaliza Brasil</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 text-gray-900">
+		<!-- HEADER -->
+        <header class="bg-white shadow p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Ranking de Engajamento - Fiscaliza Brasil</h1>
+                <input type="text" placeholder="Buscar por nome ou estado" class="p-2 border rounded w-64" />
+            </div>
+        </header>
+		<main class="container mx-auto mt-8">
+			<section class="mb-6">
+				<h1 class="text-2xl font-bold mb-2">Ranking de Engajamento</h1>
+				<p class="text-gray-700 text-sm">
+					Veja quais deputados mais atuam, propõem e participam das decisões do país.
+				</p>
+			</section>
+
+            <section class="bg-white p-6 rounded-xl shadow">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full text-sm text-left border border-gray-300">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="px-4 py-2">#</th>
+                                <th class="px-4 py-2">Deputado</th>
+                                <th class="px-4 py-2">Partido</th>
+                                <th class="px-4 py-2">UF</th>
+                                <th class="px-4 py-2">Presença</th>
+                                <th class="px-4 py-2">Projetos</th>
+                                <th class="px-4 py-2">Engajamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-t">
+                                <td class="px-4 py-2 font-semibold text-blue-600">1º</td>
+                                <td class="px-4 py-2">Maria Souza</td>
+                                <td class="px-4 py-2">XYZ</td>
+                                <td class="px-4 py-2">SP</td>
+                                <td class="px-4 py-2">93%</td>
+                                <td class="px-4 py-2">12</td>
+                                <td class="px-4 py-2 text-green-600 font-medium">Alta</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">2º</td>
+                                <td class="px-4 py-2">João Lima</td>
+                                <td class="px-4 py-2">ABC</td>
+                                <td class="px-4 py-2">MG</td>
+                                <td class="px-4 py-2">89%</td>
+                                <td class="px-4 py-2">8</td>
+                                <td class="px-4 py-2 text-green-600 font-medium">Alta</td>
+                            </tr>
+                            <tr class="border-t">
+                                <td class="px-4 py-2">3º</td>
+                                <td class="px-4 py-2">Carlos Mendes</td>
+                                <td class="px-4 py-2">QRS</td>
+                                <td class="px-4 py-2">RJ</td>
+                                <td class="px-4 py-2">71%</td>
+                                <td class="px-4 py-2">4</td>
+                                <td class="px-4 py-2 text-yellow-500 font-medium">Média</td>
+                            </tr>
+                            <tr class="border-t bg-red-50">
+                                <td class="px-4 py-2">148º</td>
+                                <td class="px-4 py-2">Fulano Inativo</td>
+                                <td class="px-4 py-2">ZZZ</td>
+                                <td class="px-4 py-2">RR</td>
+                                <td class="px-4 py-2 text-red-600">22%</td>
+                                <td class="px-4 py-2">0</td>
+                                <td class="px-4 py-2 text-red-600 font-medium">Baixa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+		</main>
+        
+        <footer class="mt-12 p-6 bg-white shadow-inner text-center text-sm text-gray-500">
+            Dados públicos da Câmara e Senado — Fiscaliza Brasil © 2025
+        </footer>
+	</body>
+</html>

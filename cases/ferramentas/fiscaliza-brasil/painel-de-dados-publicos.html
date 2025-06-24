@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Painel de Dados Públicos - Fiscaliza Brasil</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="bg-gray-100 text-gray-900">
+		<!-- HEADER -->
+        <header class="bg-white shadow p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Painel de Dados Públicos</h1>
+                <input type="text" placeholder="Buscar por nome ou estado" class="p-2 border rounded w-64" />
+            </div>
+        </header>
+		<main class="container mx-auto mt-8">
+			<section class="mb-6">
+				<h1 class="text-2xl font-bold mb-2">Painel de Dados Públicos</h1>
+				<p class="text-sm text-gray-700">
+					Acompanhe os dados oficiais disponibilizados por fontes públicas sobre
+					deputados, partidos e o Congresso.
+				</p>
+			</section>
+            <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mb-10">
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-lg font-semibold mb-2">Deputados Ativos</h2>
+                    <p class="text-3xl font-bold text-blue-600">513</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-lg font-semibold mb-2">Projetos de Lei em Tramitação</h2>
+                    <p class="text-3xl font-bold text-yellow-600">2.340</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-lg font-semibold mb-2">Presença Média</h2>
+                    <p class="text-3xl font-bold text-green-600">89%</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-lg font-semibold mb-2">Despesas Totais de Gabinete (2024)</h2>
+                    <p class="text-3xl font-bold text-red-600">R$ 987.400.000</p>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-lg font-semibold mb-2">Partidos com Maior Participação</h2>
+                    <ul class="text-sm mt-2 text-gray-700 space-y-1">
+                        <li>Partido A - 98 deputados</li>
+                        <li>Partido B - 84 deputados</li>
+                        <li>Partido C - 62 deputados</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl shadow p-6">
+                    <h2 class="text-lg font-semibold mb-2">Estados com Maior Representatividade</h2>
+                    <ul class="text-sm mt-2 text-gray-700 space-y-1">
+                        <li>São Paulo - 70 deputados</li>
+                        <li>Minas Gerais - 53 deputados</li>
+                        <li>Rio de Janeiro - 46 deputados</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-lg font-semibold mb-4">Fonte dos Dados</h2>
+                <ul class="text-sm text-gray-700 list-disc list-inside space-y-1">
+                    <li>Câmara dos Deputados - dadosabertos.camara.leg.br</li>
+                    <li>Senado Federal - dadosabertos.senado.leg.br</li>
+                    <li>Portal da Transparência - transparencia.gov.br</li>
+                </ul>
+            </section>
+		</main>
+        <footer class="mt-12 p-6 bg-white shadow-inner text-center text-sm text-gray-500">
+            Dados públicos da Câmara e Senado — Fiscaliza Brasil © 2025
+        </footer>
+	</body>
+</html>
