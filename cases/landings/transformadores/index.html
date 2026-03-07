@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrafoSense | Dashboard MVP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a'
+            }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+  <div class="min-h-screen flex">
+    <aside class="hidden lg:flex lg:w-72 xl:w-80 bg-slate-950 text-slate-100 flex-col border-r border-slate-800">
+      <div class="px-6 py-6 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-brand-600 flex items-center justify-center font-bold text-lg">TS</div>
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">MVP SaaS</p>
+            <h1 class="text-xl font-semibold">TrafoSense</h1>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-slate-400 leading-6">
+          Monitoramento inteligente de transformadores com foco em prevenção de falhas, alertas e histórico operacional.
+        </p>
+      </div>
+
+      <nav class="px-4 py-5 space-y-2 text-sm">
+        <a href="#" class="flex items-center justify-between px-4 py-3 rounded-2xl bg-slate-900 border border-slate-800 text-white">
+          <span>Visão Geral</span>
+          <span class="text-[10px] uppercase tracking-wider text-brand-300">MVP</span>
+        </a>
+        <a href="#ativos" class="flex items-center justify-between px-4 py-3 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-slate-800 text-slate-300">
+          <span>Ativos</span>
+          <span class="text-[10px] uppercase tracking-wider text-slate-500">Hoje</span>
+        </a>
+        <a href="#saude" class="flex items-center justify-between px-4 py-3 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-slate-800 text-slate-300">
+          <span>Saúde dos Ativos</span>
+          <span class="text-[10px] uppercase tracking-wider text-emerald-400">Live</span>
+        </a>
+        <a href="#alertas" class="flex items-center justify-between px-4 py-3 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-slate-800 text-slate-300">
+          <span>Alertas</span>
+          <span class="text-[10px] uppercase tracking-wider text-amber-400">12</span>
+        </a>
+        <a href="#telemetria" class="flex items-center justify-between px-4 py-3 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-slate-800 text-slate-300">
+          <span>Telemetria</span>
+          <span class="text-[10px] uppercase tracking-wider text-slate-500">Roadmap</span>
+        </a>
+        <a href="#roadmap" class="flex items-center justify-between px-4 py-3 rounded-2xl hover:bg-slate-900 border border-transparent hover:border-slate-800 text-slate-300">
+          <span>Expansão do Produto</span>
+          <span class="text-[10px] uppercase tracking-wider text-sky-300">Futuro</span>
+        </a>
+      </nav>
+
+      <div class="mt-auto p-4">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900 p-5">
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Proposta de valor</p>
+          <h2 class="mt-2 text-lg font-semibold">Não vendemos sensores</h2>
+          <p class="mt-2 text-sm text-slate-400 leading-6">
+            Vendemos redução de risco elétrico, previsibilidade operacional e base histórica para manutenção inteligente.
+          </p>
+        </div>
+      </div>
+    </aside>
+
+    <main class="flex-1">
+      <header class="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
+        <div class="px-4 sm:px-6 lg:px-8 py-4 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Dashboard Executivo</p>
+            <h2 class="text-2xl font-semibold text-slate-900">Visão geral da operação elétrica</h2>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <div class="rounded-2xl border border-slate-200 px-4 py-3 bg-slate-50">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Empresa</p>
+              <p class="text-sm font-medium text-slate-800">Cliente Demo Industrial</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 px-4 py-3 bg-slate-50">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Atualização</p>
+              <p class="text-sm font-medium text-emerald-600">Online · há 12 segundos</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5">
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Transformadores monitorados</p>
+            <div class="mt-3 flex items-end justify-between">
+              <h3 class="text-4xl font-semibold text-slate-900">18</h3>
+              <span class="text-sm font-medium text-emerald-600">+3 este mês</span>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">Ativos conectados ao gateway e com telemetria em dia.</p>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Saúde média dos ativos</p>
+            <div class="mt-3 flex items-end justify-between">
+              <h3 class="text-4xl font-semibold text-slate-900">86%</h3>
+              <span class="text-sm font-medium text-amber-600">2 em atenção</span>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">Score composto por temperatura, carga, vibração e eventos.</p>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Alertas críticos (7 dias)</p>
+            <div class="mt-3 flex items-end justify-between">
+              <h3 class="text-4xl font-semibold text-slate-900">12</h3>
+              <span class="text-sm font-medium text-rose-600">4 abertos</span>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">Eventos acima dos limites configurados ou fora do padrão histórico.</p>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-sm text-slate-500">Economia potencial estimada</p>
+            <div class="mt-3 flex items-end justify-between">
+              <h3 class="text-4xl font-semibold text-slate-900">R$ 48k</h3>
+              <span class="text-sm font-medium text-brand-600">mês</span>
+            </div>
+            <p class="mt-4 text-sm text-slate-500">Estimativa com base em paradas evitadas e manutenção preventiva.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="ativos" class="px-4 sm:px-6 lg:px-8 pb-8">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2 bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Mapa operacional</p>
+                <h3 class="text-xl font-semibold text-slate-900">Ativos prioritários</h3>
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-3 py-2 rounded-full bg-emerald-50 text-emerald-700">Saudável</span>
+                <span class="px-3 py-2 rounded-full bg-amber-50 text-amber-700">Atenção</span>
+                <span class="px-3 py-2 rounded-full bg-rose-50 text-rose-700">Crítico</span>
+              </div>
+            </div>
+
+            <div class="mt-6 overflow-x-auto">
+              <table class="min-w-full text-sm">
+                <thead>
+                  <tr class="text-left text-slate-400 border-b border-slate-200">
+                    <th class="pb-3 font-medium">Ativo</th>
+                    <th class="pb-3 font-medium">Local</th>
+                    <th class="pb-3 font-medium">Carga</th>
+                    <th class="pb-3 font-medium">Temperatura</th>
+                    <th class="pb-3 font-medium">Vibração</th>
+                    <th class="pb-3 font-medium">Saúde</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-100 text-slate-700">
+                  <tr>
+                    <td class="py-4">
+                      <p class="font-medium text-slate-900">TR-001</p>
+                      <p class="text-xs text-slate-500">750 kVA · óleo mineral</p>
+                    </td>
+                    <td class="py-4">Planta A</td>
+                    <td class="py-4">72%</td>
+                    <td class="py-4">68°C</td>
+                    <td class="py-4">Baixa</td>
+                    <td class="py-4"><span class="px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700">93%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="py-4">
+                      <p class="font-medium text-slate-900">TR-002</p>
+                      <p class="text-xs text-slate-500">1000 kVA · seco</p>
+                    </td>
+                    <td class="py-4">Planta B</td>
+                    <td class="py-4">89%</td>
+                    <td class="py-4">81°C</td>
+                    <td class="py-4">Moderada</td>
+                    <td class="py-4"><span class="px-3 py-1.5 rounded-full bg-amber-50 text-amber-700">74%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="py-4">
+                      <p class="font-medium text-slate-900">TR-003</p>
+                      <p class="text-xs text-slate-500">500 kVA · óleo vegetal</p>
+                    </td>
+                    <td class="py-4">CD Regional</td>
+                    <td class="py-4">96%</td>
+                    <td class="py-4">92°C</td>
+                    <td class="py-4">Alta</td>
+                    <td class="py-4"><span class="px-3 py-1.5 rounded-full bg-rose-50 text-rose-700">41%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="py-4">
+                      <p class="font-medium text-slate-900">TR-004</p>
+                      <p class="text-xs text-slate-500">1500 kVA · óleo mineral</p>
+                    </td>
+                    <td class="py-4">Hospital Demo</td>
+                    <td class="py-4">64%</td>
+                    <td class="py-4">63°C</td>
+                    <td class="py-4">Baixa</td>
+                    <td class="py-4"><span class="px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700">95%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Resumo estratégico</p>
+            <h3 class="mt-2 text-xl font-semibold text-slate-900">O que esse MVP já mostra</h3>
+            <div class="mt-6 space-y-4">
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                <p class="text-sm font-medium text-slate-900">Risco por ativo</p>
+                <p class="mt-1 text-sm text-slate-500">Classificação automática para priorizar manutenção e visita técnica.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                <p class="text-sm font-medium text-slate-900">Leitura operacional em tempo real</p>
+                <p class="mt-1 text-sm text-slate-500">Visualização de temperatura, carga e vibração sem depender de inspeção manual.</p>
+              </div>
+              <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                <p class="text-sm font-medium text-slate-900">Escalabilidade do produto</p>
+                <p class="mt-1 text-sm text-slate-500">Base pronta para expandir para DGA, THD, tensão, corrente por fase e predição.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="saude" class="px-4 sm:px-6 lg:px-8 pb-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+          <div class="lg:col-span-3 bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Indicadores principais</p>
+                <h3 class="text-xl font-semibold text-slate-900">Saúde do transformador</h3>
+              </div>
+              <span class="px-3 py-2 rounded-full text-xs bg-brand-50 text-brand-700">TR-003 selecionado</span>
+            </div>
+
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+                <p class="text-sm text-slate-500">Temperatura do topo do óleo</p>
+                <p class="mt-2 text-3xl font-semibold text-slate-900">92°C</p>
+                <p class="mt-2 text-xs text-rose-600">+8°C acima da média</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+                <p class="text-sm text-slate-500">Carga atual</p>
+                <p class="mt-2 text-3xl font-semibold text-slate-900">96%</p>
+                <p class="mt-2 text-xs text-amber-600">Próximo do limite</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 bg-slate-50">
+                <p class="text-sm text-slate-500">Vibração</p>
+                <p class="mt-2 text-3xl font-semibold text-slate-900">Alta</p>
+                <p class="mt-2 text-xs text-rose-600">Padrão fora da curva</p>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 text-white">
+              <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Score composto</p>
+                  <h4 class="mt-2 text-5xl font-semibold">41%</h4>
+                  <p class="mt-3 max-w-xl text-sm text-slate-300 leading-6">
+                    Índice composto por temperatura, sobrecarga, eventos de vibração, estabilidade operacional e reincidência de alertas. Esse score prepara o terreno para um futuro módulo preditivo.
+                  </p>
+                </div>
+                <div class="grid grid-cols-2 gap-3 min-w-[260px]">
+                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                    <p class="text-xs text-slate-400">Último alerta</p>
+                    <p class="mt-1 font-medium">Sobrecarga persistente</p>
+                  </div>
+                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                    <p class="text-xs text-slate-400">Tendência</p>
+                    <p class="mt-1 font-medium text-rose-300">Piorando</p>
+                  </div>
+                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                    <p class="text-xs text-slate-400">Janela analisada</p>
+                    <p class="mt-1 font-medium">Últimos 30 dias</p>
+                  </div>
+                  <div class="rounded-2xl bg-white/5 border border-white/10 p-4">
+                    <p class="text-xs text-slate-400">Recomendação</p>
+                    <p class="mt-1 font-medium">Inspeção imediata</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2 bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Camadas do monitoramento</p>
+            <h3 class="mt-2 text-xl font-semibold text-slate-900">Tudo que poderá entrar no sistema</h3>
+            <div class="mt-5 space-y-3">
+              <div class="flex items-start justify-between gap-4 p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <div>
+                  <p class="font-medium text-slate-900">Temperatura</p>
+                  <p class="text-sm text-slate-500">Óleo, enrolamento, ambiente e hotspot.</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700">MVP</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <div>
+                  <p class="font-medium text-slate-900">Corrente e carga</p>
+                  <p class="text-sm text-slate-500">Corrente por fase, uso nominal e sobrecarga.</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700">MVP</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <div>
+                  <p class="font-medium text-slate-900">Vibração</p>
+                  <p class="text-sm text-slate-500">Eventos anormais, tendência e futura análise espectral.</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700">MVP+</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <div>
+                  <p class="font-medium text-slate-900">Qualidade de energia</p>
+                  <p class="text-sm text-slate-500">Tensão, desequilíbrio, THD, afundamentos e surtos.</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-sky-100 text-sky-700">Fase 2</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <div>
+                  <p class="font-medium text-slate-900">Óleo e gases</p>
+                  <p class="text-sm text-slate-500">DGA, umidade, pressão e degradação do isolamento.</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-violet-100 text-violet-700">Fase 3</span>
+              </div>
+              <div class="flex items-start justify-between gap-4 p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <div>
+                  <p class="font-medium text-slate-900">Predição</p>
+                  <p class="text-sm text-slate-500">Risco de falha, janela de manutenção e score de vida útil.</p>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-700">Roadmap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="alertas" class="px-4 sm:px-6 lg:px-8 pb-8">
+        <div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+          <div class="xl:col-span-2 bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Resposta operacional</p>
+                <h3 class="text-xl font-semibold text-slate-900">Fila de alertas e ações</h3>
+              </div>
+              <div class="flex gap-2 text-xs">
+                <span class="px-3 py-2 rounded-full bg-rose-50 text-rose-700">Críticos</span>
+                <span class="px-3 py-2 rounded-full bg-amber-50 text-amber-700">Moderados</span>
+                <span class="px-3 py-2 rounded-full bg-slate-100 text-slate-700">Resolvidos</span>
+              </div>
+            </div>
+
+            <div class="mt-6 space-y-4">
+              <div class="rounded-2xl border border-rose-200 bg-rose-50 p-5">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-rose-100 text-rose-700">Crítico</span>
+                      <span class="text-xs text-slate-500">TR-003 · CD Regional</span>
+                    </div>
+                    <h4 class="mt-3 text-lg font-semibold text-slate-900">Temperatura e vibração acima do padrão</h4>
+                    <p class="mt-2 text-sm text-slate-600 leading-6">A combinação de carga elevada, aumento térmico e vibração anormal indica risco crescente de falha ou desgaste prematuro.</p>
+                  </div>
+                  <div class="min-w-[220px] rounded-2xl bg-white border border-rose-100 p-4">
+                    <p class="text-xs uppercase tracking-wider text-slate-400">Próxima ação</p>
+                    <p class="mt-2 text-sm font-medium text-slate-900">Agendar inspeção e reduzir carga</p>
+                    <p class="mt-2 text-xs text-slate-500">SLA sugerido: até 4 horas</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-amber-200 bg-amber-50 p-5">
+                <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-xs px-2.5 py-1 rounded-full bg-amber-100 text-amber-700">Moderado</span>
+                      <span class="text-xs text-slate-500">TR-002 · Planta B</span>
+                    </div>
+                    <h4 class="mt-3 text-lg font-semibold text-slate-900">Operando próximo da faixa ideal</h4>
+                    <p class="mt-2 text-sm text-slate-600 leading-6">Transformador com carga persistente acima do histórico usual. Recomendado acompanhamento e revisão da distribuição de carga.</p>
+                  </div>
+                  <div class="min-w-[220px] rounded-2xl bg-white border border-amber-100 p-4">
+                    <p class="text-xs uppercase tracking-wider text-slate-400">Próxima ação</p>
+                    <p class="mt-2 text-sm font-medium text-slate-900">Monitorar nas próximas 24h</p>
+                    <p class="mt-2 text-xs text-slate-500">SLA sugerido: até 1 dia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Canais de alerta</p>
+            <h3 class="mt-2 text-xl font-semibold text-slate-900">Comunicação e escalonamento</h3>
+            <div class="mt-6 space-y-4">
+              <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <p class="font-medium text-slate-900">E-mail operacional</p>
+                <p class="mt-1 text-sm text-slate-500">Resumo diário, semanal e abertura automática de incidente.</p>
+              </div>
+              <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <p class="font-medium text-slate-900">WhatsApp / SMS</p>
+                <p class="mt-1 text-sm text-slate-500">Alertas críticos em tempo real para responsáveis definidos.</p>
+              </div>
+              <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50">
+                <p class="font-medium text-slate-900">Integração futura</p>
+                <p class="mt-1 text-sm text-slate-500">CMMS, ERP, ticketing, API e relatórios para seguradoras.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="telemetria" class="px-4 sm:px-6 lg:px-8 pb-8">
+        <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6 lg:p-8">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+              <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Arquitetura do sistema</p>
+              <h3 class="text-xl font-semibold text-slate-900">Fluxo de coleta e inteligência</h3>
+            </div>
+            <p class="max-w-2xl text-sm text-slate-500 leading-6">
+              Esta seção ajuda a vender o projeto para o cliente mostrando que o sistema não para no dashboard: ele nasce preparado para telemetria, rastreabilidade, histórico e evolução preditiva.
+            </p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-sm font-medium text-slate-900">1. Sensores</p>
+              <p class="mt-2 text-sm text-slate-500">Temperatura, corrente, vibração, tensão, óleo e ambiente.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-sm font-medium text-slate-900">2. Gateway</p>
+              <p class="mt-2 text-sm text-slate-500">ESP32, microcontrolador industrial ou gateway IoT local.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-sm font-medium text-slate-900">3. Nuvem</p>
+              <p class="mt-2 text-sm text-slate-500">MQTT/HTTP, ingestão, banco temporal e engine de alertas.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-sm font-medium text-slate-900">4. Plataforma</p>
+              <p class="mt-2 text-sm text-slate-500">Dashboard web, histórico, ranking de risco e relatórios.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-slate-50 p-5">
+              <p class="text-sm font-medium text-slate-900">5. Inteligência</p>
+              <p class="mt-2 text-sm text-slate-500">Modelos de tendência, previsão e manutenção assistida.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap" class="px-4 sm:px-6 lg:px-8 pb-10">
+        <div class="grid grid-cols-1 xl:grid-cols-4 gap-6">
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Fase 1</p>
+            <h3 class="mt-2 text-lg font-semibold text-slate-900">MVP operacional</h3>
+            <ul class="mt-4 space-y-3 text-sm text-slate-500 leading-6 list-disc pl-5">
+              <li>Cadastro de ativos e clientes</li>
+              <li>Temperatura, carga e vibração</li>
+              <li>Alertas básicos</li>
+              <li>Dashboard executivo</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Fase 2</p>
+            <h3 class="mt-2 text-lg font-semibold text-slate-900">Qualidade elétrica</h3>
+            <ul class="mt-4 space-y-3 text-sm text-slate-500 leading-6 list-disc pl-5">
+              <li>Tensão e corrente por fase</li>
+              <li>THD e desequilíbrio</li>
+              <li>Ranking de risco por unidade</li>
+              <li>Histórico comparativo</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-3xl shadow-soft border border-slate-200 p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-slate-400">Fase 3</p>
+            <h3 class="mt-2 text-lg font-semibold text-slate-900">Análise avançada</h3>
+            <ul class="mt-4 space-y-3 text-sm text-slate-500 leading-6 list-disc pl-5">
+              <li>DGA e umidade do óleo</li>
+              <li>Vida útil estimada</li>
+              <li>Janelas de manutenção</li>
+              <li>Integrações e API</li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-brand-600 to-brand-800 text-white rounded-3xl shadow-soft p-6">
+            <p class="text-xs uppercase tracking-[0.25em] text-brand-100">Posicionamento comercial</p>
+            <h3 class="mt-2 text-lg font-semibold">O que faz o cliente enxergar valor</h3>
+            <p class="mt-4 text-sm leading-6 text-brand-50">
+              Este MVP não parece uma tela “crua” de sensores. Ele já comunica produto, evolução técnica, visão de longo prazo e retorno operacional.
+            </p>
+            <div class="mt-6 space-y-3 text-sm">
+              <div class="rounded-2xl bg-white/10 border border-white/10 p-4">Redução de paradas não planejadas</div>
+              <div class="rounded-2xl bg-white/10 border border-white/10 p-4">Base para manutenção preditiva</div>
+              <div class="rounded-2xl bg-white/10 border border-white/10 p-4">Escalável para vários clientes e ativos</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
